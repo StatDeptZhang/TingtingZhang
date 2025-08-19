@@ -35,9 +35,9 @@
 			</td>
 
 			<!--picture-->
-			<td width="25%"; align = "middle">
+			<td width="15%"; align = "middle">
 				<div class="logo">
-				<img border="0" src="photo.jpg"/>
+				<img border="0" src="photo.jpg" width="250" height="315"/>
 				</div>
 			</td>
 		   </tr>
@@ -91,9 +91,67 @@ However, brain data, one of the most commonly cited forms of big data, raise new
 data analysts, due to their unique properties that are different from conventional data. To address these
 challenges, I have led several projects in close collaboration with scientists outside statistics to develop new
 statistical models and computational algorithms for analyzing brain data. 
-	
-	
-<h4>(1) Brain Network Studies of Epileptic Seizures Using Intracranial EEG Data.</h4>
+
+<h4>(1) Lifespan Changes in Human Brain Networks.</h4>	
+The human brain is an intricate, high-dimensional network, where network nodes denote brain regions
+and network edges represent functional connectivity (FC) between pairs of brain regions. Research has shown that
+the human brain undergoes substantial changes in both FC and cognitive functions throughout a person’s lifespan. This has sparked a keen interest in mapping and understanding the trajectories of lifespan FC changes in the entire brain.</p>
+
+Despite the substantial body of research on age-related FC changes, a comprehensive analysis encompassing
+all brain regions with sufficiently large datasets is still lacking. To address this gap and provide
+more accurate and comprehensive estimates of age-related FC changes in the entire brain, we analyzed
+resting-state functional magnetic resonance imaging (fMRI) data aggregated from three Human Connectome
+Project (HCP) studies. Specifically, we analyzed data of subjects aged 8 to 100 combined from the
+HCP Young Adults, the Lifespan HCP in Development, and the Lifespan HCP in Aging.</p>
+
+Current tools for analyzing fMRI data often fall short in their ability to capture and differentiate the
+diverse patterns of age-related FC changes across numerous brain region connections. To overcome these
+limitations, we developed a new approach called clustering-enabled regression. The clustering-enabled regression advances traditional regression
+by clustering brain regions that exhibit identical and substantial changes in FC with age, while also accounting
+for sex differences. As a result, this method not only identifies regions that share identical age-related
+FC changes but also uncovers distinct patterns of these changes across different clusters of regions. Overall,
+this new approach offers improved precision and comprehensiveness in mapping sex-specific trajectories of
+age-related FC changes across all brain regions.</p>
+
+Applying the new clustering-enabled regression to the data of 2,331 subjects combined from the three
+HCP studies, we obtained several notable findings.</p>
+<ol class="bold-numbers">
+<li>Homogeneity and Heterogeneity of Age-Related FC Changes:</li> Regions that exhibit identical substantial
+age-related FC changes are generally from the same brain functional network, as shown in Figure 1. However, different
+region clusters within the same network demonstrate distinct patterns of change, suggesting heterogeneity
+in age-related FC changes within brain networks.
+
+<figure>
+  <img src="BrainCluster.jpg" alt="Within-Network FC Trajectories" width="100%" height="50%"/>
+  <figcaption>Figure 1. Identified region clusters, each consisting of at least four regions or 500 grayordinates from the same functional network. Within a single functional network, region clusters are plotted in different colors and labeled (e.g., a, b, etc.) in a descending order based on their region counts, from the largest to the smallest.  The functional networks include the auditory (AUD), cingulo-opercular (CON), dorsal attention (DAN), default mode (DMN), frontoparietal (FPN), language (LAN), somatomotor (SMN), visual (VIS), and ventral multimodal (VMM) networks. </figcaption>
+</figure>
+<li>Within- and Between-Network FC Changes:</li> FC between region clusters from the same brain functional
+network (within-network FC) tends to decrease over time, as illustrated in Figure 2. In contrast, FC between clusters belonging to different networks (between-network FC) exhibits more diverse age-related trajectories, with distinct patterns of increase or decrease across networks, as shown in Figures 3 and 4.
+
+<figure>
+  <img src="10percent_Within_Main.jpg" alt="Within-Network FC Trajectories" width="100%" height="50%"/>
+  <figcaption>Figure 2. Within-network FC trajectories. In each brain plot, one region cluster is designated as the seed cluster, plotted in black. The FC trajectory between the seed cluster and a cluster from the same functional network, referred to as cluster B, is displayed in the color assigned to cluster B. Light cyan and light coral dots in the FC plots represent FC values between a region in the seed cluster and another region in cluster B for individual male and female subjects, respectively. Dotted lines represent 95\% confidence intervals for population-mean FC trajectories of males, whereas dashed lines represent those of females. </figcaption>
+</figure>
+
+<figure>
+  <img src="Between_Main_1.jpg" alt="Between-Network FC Trajectories" width="100%" height="50%"/>
+     <figcaption>Figure 3. Between-network FC trajectories of the AUD-a and SMN-c. In each brain plot, one region cluster is designated as the seed cluster, plotted in black. The FC trajectory between the seed cluster and another cluster from a different functional network, referred to as cluster B, is displayed in the color assigned to cluster B. Light cyan and light coral dots in the FC plots represent FC values between a region in the seed cluster and another region in cluster B for individual male and female subjects, respectively. Dotted lines represent 95\% confidence intervals for population-mean FC trajectories of males, whereas dashed lines represent those of females. </figcaption>
+</figure>
+
+<figure>
+    <img src="Between_Main_2.jpg" alt="Between-Network FC Trajectories" width="100%" height="50%"/>
+  <figcaption>Figure 4. Between-network FC trajectories of  the CON-b and CON-c. In each brain plot, one region cluster is designated as the seed cluster, plotted in black. The FC trajectory between the seed cluster and another cluster from a different functional network, referred to as cluster B, is displayed in the color assigned to cluster B. Light cyan and light coral dots in the FC plots represent FC values between a region in the seed cluster and another region in cluster B for individual male and female subjects, respectively. Dotted lines represent 95\% confidence intervals for population-mean FC trajectories of males, whereas dashed lines represent those of females. </figcaption>
+</figure>
+</br>	
+
+<li>Sex-Related FC Differences:</li> Elderly females show much higher FC mainly within the default mode
+network (DMN), whereas elderly males display higher FC across several more brain functional networks.
+These differences may be linked to observations that females tend to experience more rapid
+cognitive decline in the presence of AD. This could be because elderly females rely more heavily
+on connectivity within the DMN to maintain cognitive function, and the DMN is particularly
+susceptible to AD-related pathology.
+</ol>
+<h4>(2) Brain Network Studies of Epileptic Seizures Using Intracranial EEG Data.</h4>
 	The overall goals of my research are to develop new statistical modeling methods for analyzing
 high-dimensional brain data and use the methods to understand high-dimensional directed networks in
 human brains. Specifically, my research team develops high-dimensional directed network methods for
@@ -153,7 +211,7 @@ Anterioinferior electrodes preceded by an “X" were resected in a previous epil
  <br>  <br>
  
  
- <h4>(2) Whole-Brain Network Analysis of Massive Neuroimaging Data. </h4>
+ <h4>(3) Whole-Brain Network Analysis of Massive Neuroimaging Data. </h4>
 The functional organization of the brain is governed by two principles: functional
 specialization and functional integration. The former indicates that
 different brain areas are specialized for different brain functions, while the latter
@@ -189,7 +247,7 @@ memory retrieval (gray), ventral attention
 </br>	
 
  				
-<h4>(3) Spatial-Temporal Analysis of Multi-Subject Neuroimaging Data for Human Emotion Studies.</h4>
+<h4>(4) Spatial-Temporal Analysis of Multi-Subject Neuroimaging Data for Human Emotion Studies.</h4>
 	<p><table width="90%" height="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td width="60%">
